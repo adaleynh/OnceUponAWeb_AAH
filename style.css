@@ -1,4 +1,4 @@
-/* Latte-Inspired Gradient Background */
+/* 🐾 Latte-Inspired Gradient Background */
 body {
     font-family: 'Comic Sans MS', cursive, sans-serif;
     background: linear-gradient(to bottom right, #E3C29B, #F5D3B3);
@@ -9,7 +9,7 @@ body {
     position: relative;
 }
 
-/* Header Styling */
+/* 🐾 Header Styling */
 header {
     background-color: #FFCC80;
     padding: 20px;
@@ -17,50 +17,49 @@ header {
     font-size: 20px;
 }
 
-/* Highlighted Text */
+/* 🐾 Highlighted Text (for important words) */
 .highlight {
     font-weight: bold;
     color: #ffb6c1; /* Light pink */
 }
 
-/* Paw Print Background for Sections */
+/* 🐾 Scattered Paw Prints Across the Page */
+.paw-print {
+    position: absolute;
+    width: 50px;
+    opacity: 0.6;
+}
+
+/* Specific Positions for Paw Prints */
+.paw1 { top: 10%; left: 15%; transform: rotate(20deg); }
+.paw2 { top: 25%; left: 50%; transform: rotate(-10deg); }
+.paw3 { top: 40%; left: 80%; transform: rotate(15deg); }
+.paw4 { top: 55%; left: 30%; transform: rotate(-5deg); }
+.paw5 { top: 70%; left: 60%; transform: rotate(10deg); }
+
+/* Animation: Fading Paws In and Out */
+@keyframes fadePaw {
+    0% { opacity: 0; transform: scale(1); }
+    50% { opacity: 0.8; transform: scale(1.1); }
+    100% { opacity: 0; transform: scale(1); }
+}
+
+.paw-print {
+    animation: fadePaw 5s infinite alternate;
+}
+
 .section-paws {
-    background-image: url('https://i.etsystatic.com/27070431/r/il/aac91a/2836463790/il_570xN.2836463790_3akg.jpg');
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    background-size: 80px;
-    padding-top: 80px;
+    background-size: 120px; /* Increase size */
 }
 
-/* Section Styling */
-section {
-    padding: 20px;
-    margin: 30px auto;
-    max-width: 700px;
-    background: rgba(255, 255, 255, 0.8);
-    border-radius: 15px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Image Styling */
-.image-container img {
-    width: 70%;
-    border-radius: 15px;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease-in-out;
-}
-
-.image-container img:hover {
-    transform: scale(1.1);
-}
-
-/* Bouncing Paw Prints (Left & Right) */
+/* 🐾 Bouncing Paw Prints (Left & Right) */
 .paw-left, .paw-right {
-    width: 60px; /* Adjust size */
+    width: 100px;  /* Increase size (adjust as needed) */
     position: fixed;
     animation: bouncePaw 2.5s infinite alternate ease-in-out;
     opacity: 0.8;
 }
+
 
 /* Left Paw Position */
 .paw-left {
@@ -80,7 +79,78 @@ section {
     100% { transform: translateY(-20px); }
 }
 
-/* Next and Back Buttons */
+/* 🐾 Latte’s Thoughts (Floating Speech Bubbles) */
+.latte-thought {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 15px;
+    font-style: italic;
+    max-width: 400px;
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Adding Latte's POV Label */
+.latte-thought::before {
+    content: "🐾 Latte’s POV 🐾";
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    color: #D2691E; /* Cute caramel tone */
+    margin-bottom: 5px;
+}
+
+/* 🐾 Section Styling (Off-Centered for Dynamic Layout) */
+section {
+    padding: 20px;
+    margin: 30px auto;
+    max-width: 700px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+    margin-left: 10%; /* Moves the section slightly to the left */
+}
+
+/* 🐾 Image Styling */
+.image-container img {
+    width: 70%;
+    border-radius: 15px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.image-container img:hover {
+    transform: scale(1.1);
+}
+
+/* 🐾 Animation: Bouncing Effect (For Latte Images) */
+.bounce {
+    animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0px); }
+    100% { transform: translateY(-10px); }
+}
+
+/* Image Styling - Ensuring Uniform Size */
+.image-container img {
+    width: 70%;  /* Ensures images take up the same width across all pages */
+    max-width: 500px; /* Limits the image from getting too large */
+    height: auto; /* Maintains aspect ratio */
+    border-radius: 15px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+    display: block;
+    margin: 0 auto; /* Centers the image */
+}
+
+
+/* 🐾 Next and Back Buttons */
 .next-container {
     margin-top: 20px;
 }
@@ -103,7 +173,7 @@ section {
     background-color: #B55E1D;
 }
 
-/* Footer */
+/* 🐾 Footer */
 footer {
     background-color: #D2691E;
     color: white;
