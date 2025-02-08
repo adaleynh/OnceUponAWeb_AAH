@@ -1,4 +1,4 @@
-/* 🐾 Latte-Inspired Gradient Background */
+/* Latte-Inspired Gradient Background */
 body {
     font-family: 'Comic Sans MS', cursive, sans-serif;
     background: linear-gradient(to bottom right, #E3C29B, #F5D3B3);
@@ -9,7 +9,7 @@ body {
     position: relative;
 }
 
-/* 🐾 Header Styling */
+/* Header Styling */
 header {
     background-color: #FFCC80;
     padding: 20px;
@@ -17,105 +17,60 @@ header {
     font-size: 20px;
 }
 
-/* 🐾 Highlighted Text (for important words) */
-.highlight {
-    font-weight: bold;
-    color: #ffb6c1; /* Light pink */
-}
-
-/* 🐾 Scattered Paw Prints Across the Page */
-.paw-print {
-    position: absolute;
-    width: 50px;
-    opacity: 0.6;
-}
-
-/* Specific Positions for Paw Prints */
-.paw1 { top: 10%; left: 15%; transform: rotate(20deg); }
-.paw2 { top: 25%; left: 50%; transform: rotate(-10deg); }
-.paw3 { top: 40%; left: 80%; transform: rotate(15deg); }
-.paw4 { top: 55%; left: 30%; transform: rotate(-5deg); }
-.paw5 { top: 70%; left: 60%; transform: rotate(10deg); }
-
-/* Animation: Fading Paws In and Out */
-@keyframes fadePaw {
-    0% { opacity: 0; transform: scale(1); }
-    50% { opacity: 0.8; transform: scale(1.1); }
-    100% { opacity: 0; transform: scale(1); }
-}
-
-.paw-print {
-    animation: fadePaw 5s infinite alternate;
-}
-
-.section-paws {
-    background-size: 120px; /* Increase size */
-}
-
-/* 🐾 Bouncing Paw Prints (Left & Right) */
-.paw-left, .paw-right {
-    width: 100px;  /* Increase size (adjust as needed) */
-    position: fixed;
-    animation: bouncePaw 2.5s infinite alternate ease-in-out;
-    opacity: 0.8;
-}
-
-
-/* Left Paw Position */
-.paw-left {
-    left: 5%;
-    top: 30%;
-}
-
-/* Right Paw Position */
-.paw-right {
-    right: 5%;
-    top: 30%;
-}
-
-/* Paw Bounce Animation */
-@keyframes bouncePaw {
-    0% { transform: translateY(0px); }
-    100% { transform: translateY(-20px); }
-}
-
-/* 🐾 Latte’s Thoughts (Floating Speech Bubbles) */
+/* Latte POV Thought Bubbles */
 .latte-thought {
-    background: rgba(255, 255, 255, 0.9);
-    padding: 15px;
-    border-radius: 15px;
-    font-style: italic;
-    max-width: 400px;
-    position: absolute;
-    top: 20%;
-    right: 10%;
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Adding Latte's POV Label */
-.latte-thought::before {
-    content: "🐾 Latte’s POV 🐾";
-    display: block;
-    font-weight: bold;
-    font-size: 14px;
-    text-align: center;
-    color: #D2691E; /* Cute caramel tone */
-    margin-bottom: 5px;
-}
-
-/* 🐾 Section Styling (Off-Centered for Dynamic Layout) */
-section {
-    padding: 20px;
-    margin: 30px auto;
-    max-width: 700px;
     background: rgba(255, 255, 255, 0.8);
     border-radius: 15px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    text-align: left;
-    margin-left: 10%; /* Moves the section slightly to the left */
+    padding: 15px;
+    width: 250px;
+    font-style: italic;
+    font-weight: bold;
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
 }
 
-/* 🐾 Image Styling */
+/* Make POVs longer & fun */
+.latte-thought p {
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Latte’s Photo Gallery Section */
+.gallery-section {
+    padding: 30px;
+}
+
+.gallery-title {
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.gallery-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    max-width: 80%;
+    margin: auto;
+}
+
+.gallery-container img {
+    width: 150px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.2);
+}
+
+/* Reduced Bouncing - Only on Hover */
 .image-container img {
     width: 70%;
     border-radius: 15px;
@@ -127,30 +82,33 @@ section {
     transform: scale(1.1);
 }
 
-/* 🐾 Animation: Bouncing Effect (For Latte Images) */
-.bounce {
-    animation: bounce 1s infinite alternate;
+/* Paw Prints - More Variation */
+.paw-print {
+    position: absolute;
+    opacity: 0.8;
 }
 
-@keyframes bounce {
-    0% { transform: translateY(0px); }
-    100% { transform: translateY(-10px); }
+.paw1 { width: 80px; left: 10%; top: 20%; transform: rotate(-10deg); }
+.paw2 { width: 120px; right: 15%; top: 30%; transform: rotate(20deg); }
+.paw3 { width: 100px; left: 50%; top: 50%; transform: rotate(-25deg); }
+.paw4 { width: 70px; right: 5%; bottom: 15%; transform: rotate(15deg); }
+.paw5 { width: 90px; left: 20%; bottom: 25%; transform: rotate(-5deg); }
+
+/* Background Paw Print Faint Effect */
+body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://raw.githubusercontent.com/adaleynh/OnceUponAWeb_AAH/main/pawprint.png');
+    background-repeat: repeat;
+    opacity: 0.1;
+    z-index: -1;
 }
 
-/* Image Styling - Ensuring Uniform Size */
-.image-container img {
-    width: 70%;  /* Ensures images take up the same width across all pages */
-    max-width: 500px; /* Limits the image from getting too large */
-    height: auto; /* Maintains aspect ratio */
-    border-radius: 15px;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s ease-in-out;
-    display: block;
-    margin: 0 auto; /* Centers the image */
-}
-
-
-/* 🐾 Next and Back Buttons */
+/* Back & Next Buttons */
 .next-container {
     margin-top: 20px;
 }
@@ -171,12 +129,4 @@ section {
 .next-button:hover, .prev-button:hover {
     transform: scale(1.1);
     background-color: #B55E1D;
-}
-
-/* 🐾 Footer */
-footer {
-    background-color: #D2691E;
-    color: white;
-    padding: 10px;
-    margin-top: 20px;
 }
